@@ -35,3 +35,20 @@ footer{
     text-align:center;
     padding:20px;
 }
+nav{
+  background:#ffffff;
+  padding:15px;
+  text-align:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+nav a{
+  text-decoration:none;
+  color:#4A90E2;
+  font-weight:bold;
+  margin:0 12px;
+}
+
+nav a:hover{
+  color:#2c6cb8;
+}
