@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora da Gravidez | Pais de Primeira</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header>
+<h1>📅 Calculadora da Gravidez</h1>
+<p>Descubra em que semana da gestação você está.</p>
+
+<nav>
+<a href="index.html">Início</a>
+<a href="gravidez.html">Gravidez</a>
+<a href="bebe.html">Bebê</a>
+<a href="vacinas.html">Vacinas</a>
+<a href="alimentacao.html">Alimentação</a>
+<a href="sono.html">Sono</a>
+<a href="primeiros-socorros.html">Primeiros Socorros</a>
+<a href="artigos.html">Artigos</a>
+<a href="faq.html">FAQ</a>
+<a href="contato.html">Contato</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>Calcule sua gestação</h2>
+
+<p>Informe a data do primeiro dia da sua última menstruação.</p>
+
+<input id="dum" type="date">
+
+<br><br>
+
+<button class="botao" onclick="calcularGestacao()">Calcular</button>
+
+<h3 id="resultado"></h3>
+
+</section>
+
+<footer>
+<p>© 2026 Pais de Primeira</p>
+</footer>
+
+<script>
+function calcularGestacao(){
+
+const dum=document.getElementById("dum").value;
+
+if(!dum){
+document.getElementById("resultado").innerHTML="Selecione uma data.";
+return;
+}
+
+const inicio=new Date(dum);
+const hoje=new Date();
+
+const dias=Math.floor((hoje-inicio)/(1000*60*60*24));
+
+const semanas=Math.floor(dias/7);
+
+document.getElementById("resultado").innerHTML=
+"Você está aproximadamente com <b>"+semanas+" semanas</b> de gestação.";
+
+}
+</script>
+
+</body>
+</html>
