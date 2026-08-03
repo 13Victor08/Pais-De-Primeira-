@@ -1,13 +1,21 @@
-document.addEventListener("DOMContentLoaded", function () {
+// =========================
+// Pais de Primeira - v3.0
+// =========================
 
-    console.log("Pais de Primeira 2.0 carregado!");
+document.addEventListener("DOMContentLoaded", () => {
 
-    const botao = document.querySelector(".botao");
+    console.log("Pais de Primeira carregado com sucesso!");
 
-    if(botao){
-        botao.addEventListener("click", function(){
-            alert("Bem-vindo ao Pais de Primeira! Vamos começar sua jornada. 👶");
+    const botoes = document.querySelectorAll(".botao");
+
+    botoes.forEach((botao) => {
+        botao.addEventListener("mouseenter", () => {
+            botao.style.transform = "scale(1.05)";
         });
-    }
+
+        botao.addEventListener("mouseleave", () => {
+            botao.style.transform = "scale(1)";
+        });
+    });
 
 });
