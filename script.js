@@ -1,4 +1,5 @@
 function calcularGestacao() {
+    alert("A função foi executada!");
 
     const dum = document.getElementById("dum").value;
 
