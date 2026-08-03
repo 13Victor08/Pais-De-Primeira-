@@ -191,3 +191,64 @@ box-shadow:0 5px 15px rgba(0,0,0,.15);
 outline:none;
 
 }
+/* ===== Pais de Primeira - Versão 4.0 ===== */
+
+:root{
+    --azul:#2563eb;
+    --azul-escuro:#1e40af;
+    --fundo:#f8fafc;
+    --texto:#1f2937;
+    --branco:#ffffff;
+    --cinza:#e5e7eb;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--fundo);
+    color:var(--texto);
+    line-height:1.6;
+}
+
+header{
+    background:linear-gradient(135deg,var(--azul),var(--azul-escuro));
+    color:white;
+    padding:30px 20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:2.2rem;
+    margin-bottom:10px;
+}
+
+header p{
+    opacity:.9;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    background:rgba(255,255,255,.15);
+    padding:10px 16px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:white;
+    color:var(--azul);
+}
