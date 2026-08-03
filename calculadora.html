@@ -39,7 +39,18 @@
 <br><br>
 
 <button class="botao" onclick="calcularGestacao()">Calcular</button>
+<div id="resultado" class="card" style="margin-top:30px; display:none;">
+    <h3>Resultado</h3>
+    <p id="semanas"></p>
+    <p id="meses"></p>
+    <p id="parto"></p>
 
+    <div style="background:#e5e7eb;border-radius:10px;height:18px;margin-top:20px;">
+        <div id="barra"
+             style="background:#2563eb;height:18px;width:0%;border-radius:10px;">
+        </div>
+    </div>
+</div>
 <h3 id="resultado"></h3>
 
 </section>
@@ -54,7 +65,7 @@ function calcularGestacao(){
 const dum=document.getElementById("dum").value;
 
 if(!dum){
-document.getElementById("resultado").innerHTML="Selecione uma data.";
+alert("Selecione a data da última menstruação.");
 return;
 }
 
@@ -65,11 +76,24 @@ const dias=Math.floor((hoje-inicio)/(1000*60*60*24));
 
 const semanas=Math.floor(dias/7);
 
-document.getElementById("resultado").innerHTML=
-"Você está aproximadamente com <b>"+semanas+" semanas</b> de gestação.";
+const meses=(semanas/4.3).toFixed(1);
+
+const parto=new Date(inicio);
+parto.setDate(parto.getDate()+280);
+
+document.getElementById("resultado").style.display="block";
+
+document.getElementById("semanas").innerHTML=
+"🤰 Semanas: <strong>"+semanas+"</strong>";
+
+document.getElementById("meses").innerHTML=
+"📅 Meses aproximados: <strong>"+meses+"</strong>";
+
+document.getElementById("parto").innerHTML=
+"👶 Data provável do parto: <strong>"+parto.toLocaleDateString("pt-BR")+"</strong>";
+
+const porcentagem=Math.min((semanas/40)*100,100);
+
+document.getElementById("barra").style.width=porcentagem+"%";
 
 }
-</script>
-
-</body>
-</html>
