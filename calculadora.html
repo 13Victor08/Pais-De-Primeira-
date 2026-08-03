@@ -41,6 +41,7 @@
 <button class="botao" onclick="calcularGestacao()">Calcular</button>
 <div id="resultado" class="card" style="margin-top:30px; display:none;">
     <h3>Resultado</h3>
+    
     <p id="semanas"></p>
     <p id="meses"></p>
     <p id="parto"></p>
@@ -51,7 +52,6 @@
         </div>
     </div>
 </div>
-<h3 id="resultado"></h3>
 
 </section>
 
@@ -84,12 +84,15 @@ parto.setDate(parto.getDate()+280);
 document.getElementById("resultado").style.display="block";
 
 document.getElementById("semanas").innerHTML=
+    
 "🤰 Semanas: <strong>"+semanas+"</strong>";
 
 document.getElementById("meses").innerHTML=
+    
 "📅 Meses aproximados: <strong>"+meses+"</strong>";
 
 document.getElementById("parto").innerHTML=
+    
 "👶 Data provável do parto: <strong>"+parto.toLocaleDateString("pt-BR")+"</strong>";
 
 const porcentagem=Math.min((semanas/40)*100,100);
