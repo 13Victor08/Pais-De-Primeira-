@@ -72,6 +72,7 @@ return;
 }
 
 const inicio=new Date(dum);
+    
 const hoje=new Date();
 
 const dias=Math.floor((hoje-inicio)/(1000*60*60*24));
@@ -81,6 +82,7 @@ const semanas=Math.floor(dias/7);
 const meses=(semanas/4.3).toFixed(1);
 
 const parto=new Date(inicio);
+    
 parto.setDate(parto.getDate()+280);
 
 document.getElementById("resultado").style.display="block";
@@ -97,5 +99,4 @@ document.getElementById("parto").innerHTML=
 const porcentagem=Math.min((semanas/40)*100,100);
 
 document.getElementById("barra").style.width=porcentagem+"%";
-
 }
