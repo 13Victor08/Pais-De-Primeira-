@@ -92,8 +92,8 @@ document.getElementById("meses").innerHTML=
 "📅 Meses aproximados: <strong>"+meses+"</strong>";
 
 document.getElementById("parto").innerHTML=
-"👶 Data provável do parto: <strong>"+parto.toLocaleDateString("pt-BR")+"</strong>";
-
+"👶 Data provável do parto: <strong>"
+parto.toLocaleDateString("pt-BR") + "</strong>";
 const porcentagem=Math.min((semanas/40)*100,100);
 
 document.getElementById("barra").style.width=porcentagem+"%";
