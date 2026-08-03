@@ -168,3 +168,26 @@ nav a:hover{
 footer{
     font-size:14px;
 }
+.pesquisa{
+text-align:center;
+margin:25px 0;
+}
+
+.pesquisa input{
+
+width:90%;
+max-width:550px;
+
+padding:15px;
+
+border:none;
+
+border-radius:30px;
+
+font-size:17px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+outline:none;
+
+}
