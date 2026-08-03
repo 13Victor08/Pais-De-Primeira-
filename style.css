@@ -252,3 +252,75 @@ nav a:hover{
     background:white;
     color:var(--azul);
 }
+/* ===== Cards ===== */
+
+.hero{
+    max-width:1100px;
+    margin:40px auto;
+    padding:20px;
+    text-align:center;
+}
+
+.hero h2{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.1rem;
+    color:#555;
+    margin-bottom:25px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+    max-width:1100px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.card{
+    background:#fff;
+    border-radius:16px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card h3{
+    color:var(--azul);
+    margin-bottom:12px;
+}
+
+/* ===== Botões ===== */
+
+.botao{
+    display:inline-block;
+    background:var(--azul);
+    color:#fff;
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:10px;
+    transition:.3s;
+    font-weight:bold;
+}
+
+.botao:hover{
+    background:var(--azul-escuro);
+}
+
+/* ===== Rodapé ===== */
+
+footer{
+    background:#111827;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
