@@ -290,6 +290,7 @@ nav a:hover{
 }
 
 .card:hover{
+    
     transform:translateY(-6px);
 }
 
@@ -323,4 +324,52 @@ footer{
     text-align:center;
     padding:25px;
     margin-top:50px;
+}
+/* ===== Banner Principal ===== */
+
+.hero{
+    background:#ffffff;
+    border-radius:20px;
+    padding:60px 30px;
+    margin:40px auto;
+    max-width:1200px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.hero h2{
+    font-size:42px;
+    color:#1e40af;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:800px;
+    margin:auto;
+    margin-bottom:30px;
+    color:#555;
+}
+
+.botao{
+    margin:8px;
+}
+
+/* ===== Animações ===== */
+
+.card{
+    animation:aparecer .8s ease;
+}
+
+@keyframes aparecer{
+
+from{
+opacity:0;
+transform:translateY(25px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
 }
