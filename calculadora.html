@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora da Gravidez | Pais de Primeira</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header>
+<h1>📅 Calculadora da Gravidez</h1>
+<p>Descubra sua idade gestacional.</p>
+
+<nav>
+<a href="index.html">Início</a>
+<a href="gravidez.html">Gravidez</a>
+<a href="bebe.html">Bebê</a>
+<a href="vacinas.html">Vacinas</a>
+<a href="contato.html">Contato</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>Calcule sua gestação</h2>
+
+<p>Informe a data do primeiro dia da sua última menstruação.</p>
+
+<input id="dum" type="date">
+
+<br><br>
+
+<button class="botao" onclick="calcularGestacao()">Calcular</button>
+
+<div id="resultado" class="card" style="display:none;margin-top:30px;">
+
+<h3>Resultado</h3>
+
+<p id="semanas"></p>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Pais de Primeira</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
