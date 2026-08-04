@@ -1,375 +1,270 @@
+/* ==========================
+   PAIS DE PRIMEIRA - STYLE.CSS
+   Versão 2026
+========================== */
+
+:root{
+    --azul:#2563eb;
+    --azul-escuro:#1e3a8a;
+    --verde:#22c55e;
+    --fundo:#f4f8fc;
+    --branco:#ffffff;
+    --texto:#1f2937;
+    --cinza:#6b7280;
+    --sombra:0 10px 30px rgba(0,0,0,.08);
+}
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f9ff;
-    color:#333;
-    line-height:1.6;
-}
-
-header{
-    background:linear-gradient(135deg,#4A90E2,#6BCBFF);
-    color:white;
-    text-align:center;
-    padding:40px 20px;
-}
-
-header h1{
-    font-size:38px;
-}
-
-header p{
-    margin-top:10px;
-    font-size:18px;
-}
-
-nav{
-    margin-top:25px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
-}
-
-nav a:hover{
-    text-decoration:underline;
-}
-
-.hero{
-    text-align:center;
-    padding:60px 20px;
-}
-
-.hero h2{
-    font-size:32px;
-    margin-bottom:20px;
-}
-
-.hero p{
-    max-width:700px;
-    margin:auto;
-    font-size:18px;
-}
-
-.botao{
-    display:inline-block;
-    margin-top:30px;
-    background:#4CAF50;
-    color:white;
-    padding:15px 30px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.botao:hover{
-    background:#43a047;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    padding:40px;
-}
-
-.card{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.card h3{
-    color:#4A90E2;
-    margin-bottom:10px;
-}
-
-footer{
-    background:#4A90E2;
-    color:white;
-    text-align:center;
-    padding:30px;
-    margin-top:40px;
-}
-
-@media(max-width:768px){
-
-header h1{
-font-size:30px;
-}
-
-.hero h2{
-font-size:26px;
-}
-
-nav a{
-display:block;
-margin:10px 0;
-}
-
-.cards{
-padding:20px;
-}
-
-}
-/* ===== Melhorias da Versão 3.0 ===== */
 
 html{
     scroll-behavior:smooth;
 }
 
 body{
-    background:#eef5ff;
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--fundo);
+    color:var(--texto);
+    line-height:1.7;
 }
 
+/* ==========================
+   HEADER
+========================== */
+
 header{
-    border-bottom:4px solid #ffffff33;
+    background:linear-gradient(135deg,var(--azul),var(--azul-escuro));
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
 }
+
+.logo{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    background:#fff;
+    padding:8px;
+    border-radius:50%;
+    display:block;
+    margin:0 auto 20px;
+    box-shadow:var(--sombra);
+}
+
+header h1{
+    font-size:2.5rem;
+}
+
+header p{
+    margin-top:10px;
+    opacity:.95;
+}
+
+/* ==========================
+   MENU
+========================== */
 
 nav{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:12px;
+    margin-top:30px;
 }
 
 nav a{
-    padding:10px 16px;
-    border-radius:8px;
-    transition:0.3s;
-}
-
-nav a:hover{
-    background:rgba(255,255,255,0.2);
-}
-
-.card{
-    border-left:5px solid #4A90E2;
-}
-
-.card p{
-    margin-top:10px;
-}
-
-footer{
-    font-size:14px;
-}
-.pesquisa{
-text-align:center;
-margin:25px 0;
-}
-
-.pesquisa input{
-
-width:90%;
-max-width:550px;
-
-padding:15px;
-
-border:none;
-
-border-radius:30px;
-
-font-size:17px;
-
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-
-outline:none;
-
-}
-/* ===== Pais de Primeira - Versão 4.0 ===== */
-
-:root{
-    --azul:#2563eb;
-    --azul-escuro:#1e40af;
-    --fundo:#f8fafc;
-    --texto:#1f2937;
-    --branco:#ffffff;
-    --cinza:#e5e7eb;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:var(--fundo);
-    color:var(--texto);
-    line-height:1.6;
-}
-
-header{
-    background:linear-gradient(135deg,var(--azul),var(--azul-escuro));
-    color:white;
-    padding:30px 20px;
-    text-align:center;
-}
-
-header h1{
-    font-size:2.2rem;
-    margin-bottom:10px;
-}
-
-header p{
-    opacity:.9;
-}
-
-nav{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:20px;
-}
-
-nav a{
-    color:white;
     text-decoration:none;
+    color:#fff;
     background:rgba(255,255,255,.15);
-    padding:10px 16px;
-    border-radius:10px;
+    padding:12px 18px;
+    border-radius:12px;
+    font-weight:bold;
     transition:.3s;
 }
 
 nav a:hover{
-    background:white;
+    background:#fff;
     color:var(--azul);
 }
-/* ===== Cards ===== */
+
+/* ==========================
+   PESQUISA
+========================== */
+
+.pesquisa{
+    margin-top:30px;
+}
+
+.pesquisa input{
+    width:90%;
+    max-width:600px;
+    padding:15px 20px;
+    border:none;
+    border-radius:40px;
+    outline:none;
+    font-size:16px;
+    box-shadow:var(--sombra);
+}
+
+/* ==========================
+   HERO
+========================== */
 
 .hero{
     max-width:1100px;
-    margin:40px auto;
-    padding:20px;
+    margin:50px auto;
+    background:#fff;
+    border-radius:20px;
+    padding:60px 30px;
     text-align:center;
+    box-shadow:var(--sombra);
 }
 
 .hero h2{
-    font-size:2rem;
-    margin-bottom:15px;
+    font-size:2.3rem;
+    color:var(--azul);
 }
 
 .hero p{
+    margin:25px auto;
+    max-width:750px;
     font-size:1.1rem;
-    color:#555;
-    margin-bottom:25px;
+    color:var(--cinza);
 }
 
+/* ==========================
+   BOTÃO
+========================== */
+
+.botao{
+    display:inline-block;
+    background:var(--verde);
+    color:#fff;
+    padding:15px 30px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.botao:hover{
+    background:#16a34a;
+    transform:translateY(-3px);
+}
+
+/* ==========================
+   CARDS
+========================== */
+
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
-    max-width:1100px;
+    max-width:1200px;
     margin:40px auto;
     padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
 .card{
     background:#fff;
-    border-radius:16px;
     padding:25px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    border-radius:18px;
+    box-shadow:var(--sombra);
     transition:.3s;
+    border-top:5px solid var(--azul);
 }
 
 .card:hover{
-    
-    transform:translateY(-6px);
+    transform:translateY(-8px);
 }
 
 .card h3{
     color:var(--azul);
-    margin-bottom:12px;
+    margin-bottom:15px;
 }
 
-/* ===== Botões ===== */
-
-.botao{
-    display:inline-block;
-    background:var(--azul);
-    color:#fff;
-    text-decoration:none;
-    padding:14px 24px;
-    border-radius:10px;
-    transition:.3s;
-    font-weight:bold;
+.card p{
+    color:var(--cinza);
 }
 
-.botao:hover{
-    background:var(--azul-escuro);
-}
-
-/* ===== Rodapé ===== */
+/* ==========================
+   FOOTER
+========================== */
 
 footer{
+    margin-top:60px;
     background:#111827;
     color:#fff;
     text-align:center;
-    padding:25px;
-    margin-top:50px;
-}
-/* ===== Banner Principal ===== */
-
-.hero{
-    background:#ffffff;
-    border-radius:20px;
-    padding:60px 30px;
-    margin:40px auto;
-    max-width:1200px;
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    padding:35px 20px;
 }
 
-.hero h2{
-    font-size:42px;
-    color:#1e40af;
-    margin-bottom:20px;
+footer p{
+    margin:8px 0;
 }
 
-.hero p{
-    font-size:20px;
-    max-width:800px;
-    margin:auto;
-    margin-bottom:30px;
-    color:#555;
-}
+/* ==========================
+   ANIMAÇÕES
+========================== */
 
-.botao{
-    margin:8px;
-}
-
-/* ===== Animações ===== */
-
+.hero,
 .card{
-    animation:aparecer .8s ease;
+    animation:fade .7s ease;
 }
 
-@keyframes aparecer{
+@keyframes fade{
 
 from{
 opacity:0;
-transform:translateY(25px);
+transform:translateY(20px);
 }
 
 to{
 opacity:1;
 transform:translateY(0);
+}
+
+}
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media(max-width:768px){
+
+header h1{
+font-size:2rem;
+}
+
+.hero{
+padding:40px 20px;
+}
+
+.hero h2{
+font-size:1.8rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+nav{
+flex-direction:column;
+align-items:center;
+}
+
+nav a{
+width:90%;
+max-width:300px;
+text-align:center;
+}
+
+.logo{
+width:95px;
+height:95px;
 }
 
 }
