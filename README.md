@@ -20,4 +20,4 @@ Oferecer um portal moderno, gratuito e acessível para apoiar famílias desde a 
 
 ## 💙 Desenvolvido por
 
-João Victor Souza
+João Victor Correia do Nascimento 
