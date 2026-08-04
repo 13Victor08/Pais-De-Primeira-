@@ -1,1 +1,16 @@
-
+{
+  "name": "Pais de Primeira",
+  "short_name": "Pais",
+  "description": "Portal para pais e mães de primeira viagem.",
+  "start_url": "/Pais-De-Primeira-/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "imagens/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
