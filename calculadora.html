@@ -1,46 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Calculadora da Gravidez | Pais de Primeira</title>
+
+<meta name="description" content="Calcule sua idade gestacional e a data provável do parto.">
+
 <link rel="stylesheet" href="style.css">
+<link rel="icon" href="imagens/logo.png">
+
 </head>
 
 <body>
 
 <header>
+
+<img src="imagens/logo.png" class="logo" alt="Pais de Primeira">
+
 <h1>🤰 Calculadora da Gravidez</h1>
-<p>Calcule a idade gestacional e acompanhe sua gravidez.</p>
+
+<p>
+Descubra quantas semanas de gestação você está e a data provável do parto.
+</p>
 
 <nav>
-<a href="index.html">Início</a>
-<a href="gravidez.html">Gravidez</a>
-<a href="bebe.html">Bebê</a>
-<a href="vacinas.html">Vacinas</a>
-<a href="alimentacao.html">Alimentação</a>
-<a href="sono.html">Sono</a>
-<a href="primeiros-socorros.html">Primeiros Socorros</a>
-<a href="contato.html">Contato</a>
+
+<a href="index.html">🏠 Início</a>
+<a href="gravidez.html">🤰 Gravidez</a>
+<a href="bebe.html">👶 Bebê</a>
+<a href="vacinas.html">💉 Vacinas</a>
+<a href="alimentacao.html">🍼 Alimentação</a>
+<a href="contato.html">📞 Contato</a>
+
 </nav>
 
 </header>
 
 <section class="hero">
 
-<h2>Calcule sua gestação</h2>
+<h2>Informe a data da sua última menstruação</h2>
 
-<p>Informe a data do primeiro dia da sua última menstruação.</p>
+<p>
+A calculadora utiliza a Data da Última Menstruação (DUM) para estimar a idade gestacional e a data provável do parto. O resultado é uma estimativa e não substitui a avaliação de um profissional de saúde.
+</p>
 
-<input type="date" id="dum">
+<form onsubmit="event.preventDefault(); calcularGestacao();">
 
-<br><br>
+<label for="dum">Data da última menstruação</label>
 
-<button class="botao" onclick="calcularGestacao()">Calcular</button>
+<input
+type="date"
+id="dum"
+required>
 
-<div id="resultado" class="card" style="display:none;margin-top:30px;">
+<button type="submit">
 
-<h3>Resultado</h3>
+Calcular Gestação
+
+</button>
+
+</form>
+
+</section>
+
+<section class="hero">
+
+<h2>📊 Resultado</h2>
+
+<div id="resultado" style="display:none;">
 
 <p id="semanas"></p>
 
@@ -50,19 +81,79 @@
 
 <p id="fase"></p>
 
-<div style="background:#ddd;border-radius:20px;height:20px;margin-top:20px;overflow:hidden;">
-<div id="barra" style="width:0%;height:20px;background:#4caf50;"></div>
+<div style="background:#e5e7eb;border-radius:10px;overflow:hidden;margin-top:20px;">
+
+<div id="barra"
+style="
+width:0%;
+height:22px;
+background:#2563eb;
+transition:width .8s;">
+</div>
+
 </div>
 
 </div>
 
 </section>
 
+<section class="cards">
+
+<div class="card">
+
+<h3>📅 Como funciona?</h3>
+
+<p>
+A calculadora utiliza a Data da Última Menstruação (DUM) e a regra de Naegele para estimar a idade gestacional e a data provável do parto.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>⚠️ Importante</h3>
+
+<p>
+O resultado é apenas uma estimativa. O acompanhamento do pré-natal e a avaliação do profissional de saúde são essenciais durante toda a gestação.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🤰 Próximo passo</h3>
+
+<p>
+Depois de calcular sua gestação, visite a página <strong>Gravidez</strong> para acompanhar as fases e receber orientações gerais.
+</p>
+
+<a class="botao" href="gravidez.html">Ir para Gravidez</a>
+
+</div>
+
+</section>
+
 <footer>
-<p>© 2026 Pais de Primeira</p>
+
+<p><strong>Pais de Primeira</strong></p>
+
+<p>💙 Informação • Apoio • Amor</p>
+
+<p>© <span id="ano"></span> Pais de Primeira</p>
+
+<p>
+
+<a href="index.html">Início</a> |
+
+<a href="contato.html">Contato</a> |
+
+<a href="sobre.html">Sobre</a>
+
+</p>
+
 </footer>
 
 <script src="script.js"></script>
-  
+
 </body>
 </html>
